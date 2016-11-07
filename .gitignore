@@ -1,0 +1,27 @@
+/wp/
+
+# Uploads
+/wp-content/uploads/*
+!/wp-content/uploads/.gitkeep
+
+# Cache
+/wp-content/cache/*
+!/wp-content/cache/.gitkeep
+
+# Plugins
+/wp-content/plugins/*
+!/wp-content/plugins/search-filter-pro
+
+# Themes
+/wp-content/themes/common/**/*.min.css
+/wp-content/themes/common/**/*.min.js
+
+/wp-content/themes/common/modules/**/bt-*.css
+/wp-content/themes/common/modules/**/bt-*.css.map
+
+/wp-content/themes/common/modules/**/front.css
+/wp-content/themes/common/modules/**/front.css.map
+
+/wp-content/themes/common/modules/**/admin.css
+/wp-content/themes/common/modules/**/admin.css.map
+
