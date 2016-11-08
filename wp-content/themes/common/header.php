@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/styles.css?ver=<?php echo time();?>">
     <title><?php wp_title(''); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -15,7 +15,7 @@
 
 <div class="header">
 	<?php
-		$navbar_class = (is_front_page()) ? '' : 'nav navbar-excursion';
+		$navbar_class = (is_front_page() || is_archive()) ? '' : 'nav navbar-excursion';
 	?>
 	<nav class="navbar <?php echo $navbar_class; ?>">
 		<div class="container">

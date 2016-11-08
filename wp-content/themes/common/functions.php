@@ -202,3 +202,91 @@ if( function_exists('acf_add_options_page') ) {
 	    'parent_slug' => 'options-general.php',
     ));
 }
+
+function paging_nav() {
+    // Don't print empty markup if there's only one page.
+    if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+        return;
+    }
+
+    $paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+    $pagenum_link = html_entity_decode( get_pagenum_link() );
+    $query_args   = array();
+    $url_parts    = explode( '?', $pagenum_link );
+
+    if ( isset( $url_parts[1] ) ) {
+        wp_parse_str( $url_parts[1], $query_args );
+    }
+
+    $pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+    $pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+    $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+    $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+    // Set up paginated links.
+    $links = paginate_links( array(
+        'type' => 'array',
+        'base'     => $pagenum_link,
+        'format'   => $format,
+        'total'    => $GLOBALS['wp_query']->max_num_pages,
+        'current'  => $paged,
+        'mid_size' => 1,
+        'add_args' => array_map( 'urlencode', $query_args ),
+        'prev_text' => __( '&larr;', 'itera' ),
+        'next_text' => __( '&rarr;', 'itera' ),
+    ) );
+
+    if ( $links ) :
+        $lis = '';
+        $count = count($links);
+        $i = 1;
+        foreach ($links as $link) {
+            $class_active = (strpos($link, '<span') === 0 && strpos($link, 'dots') === false) ? ' class="active"' : '';
+            $id_last = ($i == $count) ? ' id="post-link-next"' : '';
+            $lis .= '<li'. $class_active . $id_last . '>' . $link . '</li>';
+            $i++;
+        }
+
+        ?>
+        <ul class="pagination">
+            <?php echo $lis; ?>
+        </ul>
+        <?php
+    endif;
+}
+
+
+global $catalonia_have_posts_fix;
+$catalonia_have_posts_fix = array();
+
+function catalonia_have_posts($query = null) {
+    global $catalonia_have_posts_fix;
+    if (!$query) {
+        global $wp_query;
+        $query = $wp_query;
+    }
+    $unique = md5($query->request);
+    if (isset($catalonia_have_posts_fix[$unique]) && $catalonia_have_posts_fix[$unique] == true) {
+        return false;
+    }
+
+    $have_posts = $query->have_posts();
+    if (!$have_posts) {
+        $catalonia_have_posts_fix[$unique] = true;
+    }
+    return $have_posts;
+}
+
+function catalonia_rewind_posts($query = null){
+    global $catalonia_have_posts_fix;
+    if (!$query) {
+        global $wp_query;
+        $query = $wp_query;
+    }
+    $unique = md5($query->request);
+    if (isset($catalonia_have_posts_fix[$unique]) && $catalonia_have_posts_fix[$unique] == true){
+        unset($catalonia_have_posts_fix[$unique]);
+    }
+    $query->rewind_posts();
+}

@@ -1,42 +1,57 @@
 <?php get_header(); ?>
-
-<?php if (have_posts()): the_post(); ?>
-<main>
+<div class="blog-entry">
 	<div class="container">
 		<div class="row">
-			<div class="news-content">
-				<div class="col-sm-9 news-list">
-					<div class="row">
-						<div class="col-sm-12">
-							<article>
-								<?php the_post_thumbnail('full', array('class' => 'img-responsive center-block')); ?>
-								<h2><?php the_title(); ?></h2>
-								<p><span><?php echo get_the_date('M j, Y H:m'); ?></span></p>
-
-								<?php the_content(); ?>
-							</article>
-							<div class="social-box">
-							  <a class="btn btn-social-icon btn-facebook">
-								<span class="fa fa-facebook"></span>
-							  </a>
-							  <a class="btn btn-social-icon btn-twitter">
-								<span class="fa fa-twitter"></span>
-							  </a>
-							  <a class="btn btn-social-icon btn-linkedin">
-								<span class="fa fa-linkedin"></span>
-							  </a>
-							  <span class="text">Share</span>
+			<?php if (catalonia_have_posts()): the_post(); ?>
+				<div class="col-xs-12">
+					<div class="entry-body">
+						<div class="entry-main">
+							<?php the_post_thumbnail('full', array('class' => 'img-responsive center-block')); ?>
+							<div class="description">
+								<div class="title"><?php the_title(); ?></div>
+								<div class="date"><?php echo get_the_date('j F Y, H:m'); ?></div>
 							</div>
+						</div>
+						<div class="entry-content">
+							<?php the_content(); ?>
+						</div>
+						<div class="entry-comments">
+							<div class="comments-header">Комментарии</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
-					<?php get_sidebar(); ?>
-				</div>
+			<?php endif; ?>
+		</div>
+	</div>
+	<div class="related-entries">
+		<div class="container">
+			<div class="row">
+				<div class="related-header">Также интересное в <a href="<?php echo get_category_link(get_category_by_slug('uncategorized')); ?>" title="Блоге">блоге</a></div>
+				<?php $related_query = new WP_Query(array(
+						'posts_per_page' => 2,
+						'post__not_in' => array(get_the_ID()),
+					));
+				?>
+				<?php while (catalonia_have_posts($related_query)) : $related_query->the_post(); ?>
+					<div class="col-xs-12 col-sm-6">
+						<article>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+								<img src="<?php the_post_thumbnail_url('large'); ?>" alt="blog image" />
+								<div class="info-block">
+									<div class="blog-title"><?php the_title(); ?></div>
+									<div class="blog-info">
+										<span class="date"><?php echo get_the_date('j F Y'); ?></span>
+										<span class="comments"> | 4 комментария</span>
+									</div>
+									<div class="blog-excerpt"><?php the_excerpt(); ?></div>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button">Читать</a>
+								</div>
+							</a>
+						</article>
+					</div>
+				<?php endwhile; ?>
 			</div>
 		</div>
 	</div>
-</main>
-<?php endif; ?>
-
+</div>
 <?php get_footer(); ?>
