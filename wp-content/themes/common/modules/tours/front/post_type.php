@@ -24,7 +24,32 @@ add_action('init', function() {
                 'editor',
                 'excerpt',
                 'revisions',
-                'thumbnail'
+                'thumbnail',
+                'comments'
+            )
+        )
+    );
+
+    register_post_type( 'guides',
+        array(
+            'labels' => array(
+                'name' => __( 'Guides' ),
+                'singular_name' => __( 'Guide' ),
+                'add_new' => _x('Add New', 'guides'),
+                'add_new_item' => __("Add New Guide"),
+                'edit_item' => __("Edit Guide"),
+                'new_item' => __("New Guide"),
+                'view_item' => __("View Guide"),
+                'search_items' => __("Search Guides"),
+                'not_found' =>  __('No guides found'),
+                'not_found_in_trash' => __('No guides found in Trash'),
+                'parent_item_colon' => ''
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor'
             )
         )
     );

@@ -3,6 +3,7 @@ $(document).ready(function() {
         var trigger = $(event.relatedTarget);
         var thumbnail = trigger.data('thumbnail');
         var title = trigger.data('title');
+        var link = trigger.data('link');
         var excerpt = trigger.data('excerpt');
         var duration = trigger.data('duration');
         var modal = $(this);
@@ -10,5 +11,6 @@ $(document).ready(function() {
         modal.find('.order-title').text('Заказать тур "' + title + '"');
         modal.find('.order-excerpt').text(excerpt);
         modal.find('.order-duration').text('Продолжительность: ' + duration);
+        modal.find('.tour-name').val(title + ': ' + link);
     });
 });

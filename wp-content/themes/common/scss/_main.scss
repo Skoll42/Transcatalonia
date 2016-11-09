@@ -5,7 +5,6 @@ body {
 .articles-grid {
 	a.article-card {
 		color: #FFFFFF;
-		display: block;
 		height: 100%;
 		width: 100%;
 		text-decoration: none;
@@ -55,6 +54,7 @@ body {
 		}
 		.place {
 			display: inline-block;
+			padding: 0;
 			.city {
 				font-size: 24px;
 				line-height: 24px;
@@ -79,6 +79,7 @@ body {
 		}
 		.price {
 			margin-top: 20px;
+			padding: 0;
 			@media (min-width: $screen-xs-min) {
 				float: right;
 				margin-top: 0;
@@ -128,7 +129,7 @@ body {
 					}
 			    }
 			}
-			.order-button, .more-button	{				
+			.order-button, .more-button	{
 				display: inline-block;
 				margin-top: 30px;
 				a {
@@ -140,6 +141,12 @@ body {
 			}
 			.order-button {
 				margin-right: 30px;
+				color: #64dd17;
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 		&.main-article {
@@ -164,6 +171,7 @@ body {
 				position: absolute;
 				right: 0;
 				.place {
+					padding: 0;
 					.city {
 						font-size: 36px;
 						line-height: 36px;
@@ -181,6 +189,7 @@ body {
 				}				
 				.price {
 					margin-top: 20px;
+					padding: 0;
 					@media (min-width: $screen-xs-min) {
 						float: right;
 						margin-top: 0;
@@ -192,16 +201,16 @@ body {
 					}
 					.order-button {
 						background-color: #64dd17;
+						color: #fff;
+						outline: 0;
 						border-radius: 2px;
 						font-size: 14px;
 						font-weight: 500;
-						outline: 0;
 						padding: 12px 15px;
 						text-align: center;
+						text-decoration: none;
 						text-transform: uppercase;
-						a {
-							color: #fff;
-							outline: 0;
+						&:hover {
 							text-decoration: none;
 						}
 					}
@@ -300,6 +309,93 @@ body {
 
 .excursion {
 	margin-top: -120px;
+	.modal {
+		.modal-dialog {
+			background-color: #fff;
+			border-radius: 2px;
+			.order-popup-header {
+				background-color: #0d47a1;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+				padding: 20px;
+				.order-image {
+					display: inline-block;
+				}
+				img {
+					border-radius: 50%;
+					display: block;
+					height: 120px;
+					margin: 0 auto 20px;
+					vertical-align: middle;
+					width: 120px;
+					@media (min-width: $screen-sm-min) {
+						display: inline;
+						margin: 0 15px 0 0;
+					}
+				}
+				.order-info {
+					color: #fff;
+					display: inline-block;
+					max-width: 400px;
+					opacity: .87;
+					vertical-align: middle;
+					.order-title {
+						font-size: 24px;
+						line-height: 26px;
+						margin-bottom: 10px;
+					}
+					.order-excerpt .order-duration {
+						font-size: 14px;
+						line-height: 16px;
+					}
+					.order-excerpt {
+						margin-bottom: 10px;
+					}
+				}
+			}
+			.order-popup-form {
+				padding: 20px;
+				input {
+					border: 0;
+					border-bottom: 1px solid #e0e0e0;
+					font-size: 16px;
+					line-height: 16px;
+					margin: 10px 0;
+					opacity: .87;
+					outline: 0;
+					padding: 7px 0;
+					width: 100%;
+				}
+			}
+			.order-popup-buttons {
+				padding: 0 20px 20px;
+				text-align: right;
+				.cancel-button, .order-button {
+					background-color: #fff;
+					border-radius: 2px;
+					-webkit-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
+					-moz-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
+					box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
+					color: #010000;
+					display: inline-block;
+					font-size: 14px;
+					line-height: 14px;
+					padding: 12px 15px;
+					text-decoration: none;
+					text-transform: uppercase;
+					border: none;
+					&:focus {
+						outline: none;
+					}
+				}
+				.order-button {
+					background-color: #64dd17;
+					color: #fff;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
 	.container {
 		border-radius: 2px;
 		-webkit-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
@@ -403,6 +499,7 @@ body {
 			.main-image {
 				img {
 					margin: 0;
+					max-height: 500px;
 				}				
 			}
 			.excursion-content {
@@ -438,10 +535,14 @@ body {
 				    text-align: center;										
 					text-decoration: none;
 					text-transform: uppercase;
+					text-underline: none;
 					@media (min-width: $screen-sm-min) {
     					float: right;
     					margin-bottom: 0;
     				}
+					&:hover {
+						text-underline: none;
+					}
 				}
 				.price-table {
 					.header {
