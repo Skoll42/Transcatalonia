@@ -308,6 +308,8 @@ body {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     padding: 20px; }
+    .articles-grid .modal .modal-dialog .order-popup-header .order-image {
+      display: inline-block; }
     .articles-grid .modal .modal-dialog .order-popup-header img {
       border-radius: 50%;
       display: block;
@@ -361,7 +363,10 @@ body {
       line-height: 14px;
       padding: 12px 15px;
       text-decoration: none;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      border: none; }
+      .articles-grid .modal .modal-dialog .order-popup-buttons .cancel-button:focus, .articles-grid .modal .modal-dialog .order-popup-buttons .order-button:focus {
+        outline: none; }
     .articles-grid .modal .modal-dialog .order-popup-buttons .order-button {
       background-color: #64dd17;
       color: #fff;

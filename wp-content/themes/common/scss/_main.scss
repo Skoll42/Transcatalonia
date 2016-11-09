@@ -218,6 +218,9 @@ body {
 				border-top-left-radius: 2px;
 				border-top-right-radius: 2px;
 				padding: 20px;
+				.order-image {
+					display: inline-block;
+				}
 				img {
 					border-radius: 50%;
 					display: block;
@@ -280,6 +283,10 @@ body {
 					padding: 12px 15px;
 					text-decoration: none;
 					text-transform: uppercase;
+					border: none;
+					&:focus {
+						outline: none;
+					}
 				}
 				.order-button {
 					background-color: #64dd17;
