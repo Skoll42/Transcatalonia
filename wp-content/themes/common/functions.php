@@ -178,12 +178,31 @@ function get_lowest_tour_price($id) {
             }
         }
 
-    } else {
-        $lowest = 0;
     }
     return $lowest;
 }
 
+function get_group_range($id) {
+    $lowest = 1;
+    $highest = 1;
+    if ($id) {
+        $prices = get_field('prices', $id);
+        if (!empty($prices)) {
+            $lowest = $prices[0]['number_of_tourists'];
+            $highest = $prices[0]['number_of_tourists'];
+            foreach ($prices as $price) {
+                if($price['number_of_tourists'] < $lowest) {
+                    $lowest = $price['number_of_tourists'];
+                }
+
+                if($price['number_of_tourists'] > $highest) {
+                    $highest = $price['number_of_tourists'];
+                }
+            }
+        }
+    }
+    return $lowest == $highest ? $lowest : $lowest . '-' . $highest;
+}
 
 function paging_nav() {
     // Don't print empty markup if there's only one page.

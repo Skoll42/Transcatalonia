@@ -132,7 +132,6 @@ body {
 
 .articles-grid a.article-card {
   color: #FFFFFF;
-  display: block;
   height: 100%;
   width: 100%;
   text-decoration: none; }
@@ -173,7 +172,8 @@ body {
         -moz-transform: none;
         width: 100%; } }
   .articles-grid article .place {
-    display: inline-block; }
+    display: inline-block;
+    padding: 0; }
     .articles-grid article .place .city {
       font-size: 24px;
       line-height: 24px;
@@ -193,7 +193,8 @@ body {
       .articles-grid article .place .details span {
         display: block; }
   .articles-grid article .price {
-    margin-top: 20px; }
+    margin-top: 20px;
+    padding: 0; }
     @media (min-width: 480px) {
       .articles-grid article .price {
         float: right;
@@ -244,7 +245,12 @@ body {
         text-decoration: none;
         text-transform: uppercase; }
     .articles-grid article .detailed-description .order-button {
-      margin-right: 30px; }
+      margin-right: 30px;
+      color: #64dd17;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .articles-grid article .detailed-description .order-button:hover {
+        text-decoration: none; }
   .articles-grid article.main-article {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -265,20 +271,23 @@ body {
       padding: 20px 15px;
       position: absolute;
       right: 0; }
-      .articles-grid article.main-article .description .place .city {
-        font-size: 36px;
-        line-height: 36px;
-        margin-bottom: 15px;
-        max-width: 70%; }
-        @media (min-width: 992px) {
-          .articles-grid article.main-article .description .place .city {
-            max-width: none; } }
-      .articles-grid article.main-article .description .place .details {
-        font-size: 14px;
-        line-height: 24px;
-        opacity: .87; }
+      .articles-grid article.main-article .description .place {
+        padding: 0; }
+        .articles-grid article.main-article .description .place .city {
+          font-size: 36px;
+          line-height: 36px;
+          margin-bottom: 15px;
+          max-width: 70%; }
+          @media (min-width: 992px) {
+            .articles-grid article.main-article .description .place .city {
+              max-width: none; } }
+        .articles-grid article.main-article .description .place .details {
+          font-size: 14px;
+          line-height: 24px;
+          opacity: .87; }
       .articles-grid article.main-article .description .price {
-        margin-top: 20px; }
+        margin-top: 20px;
+        padding: 0; }
         @media (min-width: 480px) {
           .articles-grid article.main-article .description .price {
             float: right;
@@ -289,16 +298,16 @@ body {
           margin-bottom: 15px; }
         .articles-grid article.main-article .description .price .order-button {
           background-color: #64dd17;
+          color: #fff;
+          outline: 0;
           border-radius: 2px;
           font-size: 14px;
           font-weight: 500;
-          outline: 0;
           padding: 12px 15px;
           text-align: center;
+          text-decoration: none;
           text-transform: uppercase; }
-          .articles-grid article.main-article .description .price .order-button a {
-            color: #fff;
-            outline: 0;
+          .articles-grid article.main-article .description .price .order-button:hover {
             text-decoration: none; }
 .articles-grid .modal .modal-dialog {
   background-color: #fff;
@@ -374,6 +383,77 @@ body {
 
 .excursion {
   margin-top: -120px; }
+  .excursion .modal .modal-dialog {
+    background-color: #fff;
+    border-radius: 2px; }
+    .excursion .modal .modal-dialog .order-popup-header {
+      background-color: #0d47a1;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      padding: 20px; }
+      .excursion .modal .modal-dialog .order-popup-header .order-image {
+        display: inline-block; }
+      .excursion .modal .modal-dialog .order-popup-header img {
+        border-radius: 50%;
+        display: block;
+        height: 120px;
+        margin: 0 auto 20px;
+        vertical-align: middle;
+        width: 120px; }
+        @media (min-width: 768px) {
+          .excursion .modal .modal-dialog .order-popup-header img {
+            display: inline;
+            margin: 0 15px 0 0; } }
+      .excursion .modal .modal-dialog .order-popup-header .order-info {
+        color: #fff;
+        display: inline-block;
+        max-width: 400px;
+        opacity: .87;
+        vertical-align: middle; }
+        .excursion .modal .modal-dialog .order-popup-header .order-info .order-title {
+          font-size: 24px;
+          line-height: 26px;
+          margin-bottom: 10px; }
+        .excursion .modal .modal-dialog .order-popup-header .order-info .order-excerpt .order-duration {
+          font-size: 14px;
+          line-height: 16px; }
+        .excursion .modal .modal-dialog .order-popup-header .order-info .order-excerpt {
+          margin-bottom: 10px; }
+    .excursion .modal .modal-dialog .order-popup-form {
+      padding: 20px; }
+      .excursion .modal .modal-dialog .order-popup-form input {
+        border: 0;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 10px 0;
+        opacity: .87;
+        outline: 0;
+        padding: 7px 0;
+        width: 100%; }
+    .excursion .modal .modal-dialog .order-popup-buttons {
+      padding: 0 20px 20px;
+      text-align: right; }
+      .excursion .modal .modal-dialog .order-popup-buttons .cancel-button, .excursion .modal .modal-dialog .order-popup-buttons .order-button {
+        background-color: #fff;
+        border-radius: 2px;
+        -webkit-box-shadow: 0px 2px 6px 0px gray;
+        -moz-box-shadow: 0px 2px 6px 0px gray;
+        box-shadow: 0px 2px 6px 0px gray;
+        color: #010000;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 12px 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: none; }
+        .excursion .modal .modal-dialog .order-popup-buttons .cancel-button:focus, .excursion .modal .modal-dialog .order-popup-buttons .order-button:focus {
+          outline: none; }
+      .excursion .modal .modal-dialog .order-popup-buttons .order-button {
+        background-color: #64dd17;
+        color: #fff;
+        margin-left: 10px; }
   .excursion .container {
     border-radius: 2px;
     -webkit-box-shadow: 0px 2px 6px 0px gray;
@@ -450,7 +530,8 @@ body {
     margin: 20px 0;
     width: 100%; }
   .excursion .tab-content .excursion-body .main-image img {
-    margin: 0; }
+    margin: 0;
+    max-height: 500px; }
   .excursion .tab-content .excursion-body .excursion-content {
     padding: 25px; }
     .excursion .tab-content .excursion-body .excursion-content .place {
@@ -480,11 +561,14 @@ body {
       padding: 12px 15px;
       text-align: center;
       text-decoration: none;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-underline: none; }
       @media (min-width: 768px) {
         .excursion .tab-content .excursion-body .excursion-content .order-button {
           float: right;
           margin-bottom: 0; } }
+      .excursion .tab-content .excursion-body .excursion-content .order-button:hover {
+        text-underline: none; }
     .excursion .tab-content .excursion-body .excursion-content .price-table .header {
       font-size: 18px;
       line-height: 18px;
@@ -549,15 +633,18 @@ body {
     .blog article .info-block .blog-title, .related-entries article .info-block .blog-title {
       font-size: 24px;
       line-height: 30px;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      color: #000; }
     .blog article .info-block .blog-info, .related-entries article .info-block .blog-info {
       font-size: 14px;
       line-height: 14px;
       margin-bottom: 15px;
-      opacity: .54; }
+      opacity: .54;
+      color: #000; }
     .blog article .info-block .blog-excerpt, .related-entries article .info-block .blog-excerpt {
       font-size: 14px;
-      opacity: .87; }
+      opacity: .87;
+      color: #000; }
     .blog article .info-block .read-button, .related-entries article .info-block .read-button {
       color: #64dd17;
       display: block;
