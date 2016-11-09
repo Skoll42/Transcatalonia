@@ -24,11 +24,8 @@ add_action('init', function() {
                 'editor',
                 'excerpt',
                 'revisions',
-            ),
-            /*
-            'show_ui' => true,
-            'publicly_queryable' => true,
-            'query_var' => true,*/
+                'thumbnail'
+            )
         )
     );
 });
