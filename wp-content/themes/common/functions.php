@@ -121,8 +121,7 @@ class Tct_Walker_Nav_Menu extends Walker_Nav_Menu {
 
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"sub-menu dropdown-meешьу екфслштп кузщке
-nu\">\n";
+		$output .= "\n$indent<ul class=\"sub-menu dropdown-menu\">\n";
 	}
 
     public function end_lvl( &$output, $depth = 0, $args = array() ) {
@@ -161,44 +160,26 @@ add_action('wp_enqueue_scripts', function () {
     if (is_page('about')) {
         wp_enqueue_script('template-about', get_stylesheet_directory_uri() . '/js/template-about.js', array('jquery'), nix_get_rev(), true);
     }
-    if (is_page('membership')) {
-        wp_enqueue_script('template-membership', get_stylesheet_directory_uri() . '/js/template-membership.js', array('jquery'), nix_get_rev(), true);
-    }
-    if (is_page('pricing')) {
-        wp_enqueue_script('template-pricing', get_stylesheet_directory_uri() . '/js/template-pricing.js', array('jquery'), nix_get_rev(), true);
-    }
-    if (is_singular('jobs')) {
-        wp_enqueue_script('single-jobs', get_stylesheet_directory_uri() . '/js/single-jobs.js', array('jquery'), nix_get_rev(), true);
-    }
     if (is_home()) {
         wp_enqueue_script('pagination', get_stylesheet_directory_uri() . '/js/load-more.js', array('jquery'), true);
     }
 });
 
+function get_lowest_tour_price($id) {
+    $lowest = 0;
+    if ($id) {
+        $prices = get_field('prices', $id);
+        if (!empty($prices)) {
+            $lowest = $prices[0]['price'];
+            foreach ($prices as $price) {
+                if($price['price'] < $lowest) {
+                    $lowest = $price['price'];
+                }
+            }
+        }
 
-
-add_action('init', function() {
-    register_post_type('jobs', array(
-        'labels' => array(
-            'name' => __( 'Jobs' ),
-            'singular_name' => __( 'Job' )
-        ),
-        'public' => true,
-        'has_archive' => false,
-        'rewrite' => array(
-            'with_front' => false,
-        ),
-    ));
-});
-
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page(array(
-	    'page_title' => 'Jobs Settings',
-	    'parent_slug' => 'edit.php?post_type=jobs',
-    ));
-
-	acf_add_options_page(array(
-	    'page_title' => 'General Info',
-	    'parent_slug' => 'options-general.php',
-    ));
+    } else {
+        $lowest = 0;
+    }
+    return $lowest;
 }

@@ -3,6 +3,17 @@ body {
 }
 
 .articles-grid {
+	a.article-card {
+		color: #FFFFFF;
+		display: block;
+		height: 100%;
+		width: 100%;
+		text-decoration: none;
+
+		&:hover {
+			text-underline: none;
+		}
+	}
 	.left {
 		@media (min-width: $screen-md-min) {
 			padding-right: 4px;
