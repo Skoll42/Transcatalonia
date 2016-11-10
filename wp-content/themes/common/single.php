@@ -36,7 +36,7 @@
 				<?php while (catalonia_have_posts($related_query)) : $related_query->the_post(); ?>
 					<div class="col-xs-12 col-sm-6">
 						<article>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<a class="blog-post-entry" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 								<img src="<?php the_post_thumbnail_url('large'); ?>" alt="blog image" />
 								<div class="info-block">
 									<div class="blog-title"><?php the_title(); ?></div>

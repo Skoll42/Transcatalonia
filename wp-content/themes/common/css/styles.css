@@ -622,6 +622,10 @@ body {
 
 .blog article, .related-entries article {
   margin-bottom: 15px; }
+  .blog article a.blog-post-entry, .related-entries article a.blog-post-entry {
+    text-decoration: none !important; }
+    .blog article a.blog-post-entry:hover, .related-entries article a.blog-post-entry:hover {
+      text-decoration: none !important; }
   .blog article img, .related-entries article img {
     width: 100%; }
   .blog article .info-block, .related-entries article .info-block {

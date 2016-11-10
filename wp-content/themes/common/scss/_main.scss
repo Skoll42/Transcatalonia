@@ -617,6 +617,13 @@ body {
 .blog, .related-entries {	
 	article {
 		margin-bottom: 15px;
+
+		a.blog-post-entry {
+			text-decoration: none !important;
+			&:hover {
+				text-decoration: none !important;
+			}
+		}
 		img {
 			width: 100%;
 		}
