@@ -17,6 +17,7 @@
 						</div>
 						<div class="entry-comments">
 							<div class="comments-header">Комментарии</div>
+							<?php comments_template( '', true ); ?>
 						</div>
 					</div>
 				</div>
