@@ -21,7 +21,7 @@
     .header .navbar .navbar-header .header-text {
       color: #fff;
       float: right;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 300;
       letter-spacing: .1px;
       margin-top: 40px;
@@ -36,7 +36,7 @@
     max-height: none; }
     .header .navbar .navbar-collapse .header-text {
       color: #fff;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
       letter-spacing: .1px;
       padding-bottom: 20px;
@@ -128,7 +128,8 @@
     padding-bottom: 120px; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; }
 
 .articles-grid a.article-card {
   color: #FFFFFF;
