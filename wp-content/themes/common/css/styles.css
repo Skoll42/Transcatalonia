@@ -704,6 +704,9 @@ body {
         line-height: 24px;
         opacity: .87;
         padding-left: 30px; }
+      .blog-entry .entry-body .entry-comments #disqus_thread {
+        width: 95%;
+        padding-left: 30px; }
   .blog-entry .related-entries {
     margin-top: 40px; }
     .blog-entry .related-entries .related-header {
