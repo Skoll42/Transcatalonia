@@ -929,35 +929,8 @@ body {
       .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li .icon {
         display: inline-block;
         vertical-align: middle;
-        width: 34px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.individual .icon {
-        background: url("../img/individual-icon.png") no-repeat;
-        background-position: 50%;
-        height: 30px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.unique .icon {
-        background: url("../img/unique-icon.png") no-repeat;
-        background-position: 50%;
-        height: 30px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.booking .icon {
-        background: url("../img/booking-icon.png") no-repeat;
-        background-position: 50%;
-        height: 23px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.transport .icon {
-        background: url("../img/transport-icon.png") no-repeat;
-        background-position: 50%;
-        height: 25px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.translator .icon {
-        background: url("../img/translator-icon.png") no-repeat;
-        background-position: 50%;
-        height: 30px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.celebration .icon {
-        background: url("../img/celebration-icon.png") no-repeat;
-        background-position: 50%;
-        height: 33px; }
-      .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li.consulting .icon {
-        background: url("../img/consulting-icon.png") no-repeat;
-        background-position: 50%;
-        height: 28px; }
+        width: 34px;
+        height: 34px; }
       .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li span:not(.icon) {
         display: inline-block;
         margin-left: 5px;

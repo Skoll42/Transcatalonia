@@ -997,55 +997,7 @@ body {
 								display: inline-block;
 								vertical-align: middle;
 								width: 34px;
-							}
-							&.individual {
-								.icon {
-									background: url('../img/individual-icon.png') no-repeat;
-									background-position: 50%;
-									height: 30px;
-								}
-							}
-							&.unique {
-								.icon {
-									background: url('../img/unique-icon.png') no-repeat;
-									background-position: 50%;
-									height: 30px;
-								}
-							}
-							&.booking {
-								.icon {
-									background: url('../img/booking-icon.png') no-repeat;
-									background-position: 50%;
-									height: 23px;
-								}
-							}
-							&.transport {
-								.icon {
-									background: url('../img/transport-icon.png') no-repeat;
-									background-position: 50%;
-									height: 25px;
-								}
-							}
-							&.translator {
-								.icon {
-									background: url('../img/translator-icon.png') no-repeat;
-									background-position: 50%;
-									height: 30px;
-								}
-							}
-							&.celebration {
-								.icon {
-									background: url('../img/celebration-icon.png') no-repeat;
-									background-position: 50%;
-									height: 33px;
-								}
-							}
-							&.consulting {
-								.icon {
-									background: url('../img/consulting-icon.png') no-repeat;
-									background-position: 50%;
-									height: 28px;
-								}
+								height: 34px;
 							}
 							span:not(.icon) {
 								display: inline-block;
