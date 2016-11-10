@@ -1146,6 +1146,9 @@ body {
       background-position: 50%;
       background-size: contain; }
 
+.ssp_no_chrome_slider_default {
+  box-shadow: none !important; }
+
 .footer {
   background-color: #eeeeee;
   margin-top: 32px; }
