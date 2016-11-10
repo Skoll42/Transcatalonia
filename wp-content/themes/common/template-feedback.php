@@ -12,14 +12,23 @@ Template Name: Feedback Page
                 <div class="moments-slider">
                     <div class="slider-title">Фрагменты с разных сайтов и соцсетей</div>
                     <div id="moments-carousel" class="carousel slide" data-ride="carousel">
+                        <?php
+                            $args = [
+                                'post_type' => 'feedback',
+                                'posts_per_page' => -1
+                            ];
+                            $feedback_query = new WP_Query($args);
+                            $curPostNum = 0;
+                        ?>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/image-slider-1.png" alt="slider image">
-                            </div>
-                            <div class="item">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/image-slider-1.png" alt="slider image">
-                            </div>
+                            <?php if($feedback_query->have_posts()) : ?>
+                                <?php while ($feedback_query->have_posts()) : $feedback_query->the_post(); $curPostNum++; ?>
+                                    <div class="item <?php if($curPostNum == 1) : ?>active<?php endif; ?>">
+                                        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="slider image" />
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
 
                         <!-- Controls -->
