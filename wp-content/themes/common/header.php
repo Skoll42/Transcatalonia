@@ -43,6 +43,8 @@
 							'menu_class' => 'nav navbar-nav',
 							'container' => false,
 						) ); ?>
+						<a href="#" class="search-trigger <?php echo (is_search() ? 'current_page_item' : ''); ?>">Поиск</a>
+						<?php get_search_form(); ?>
 						<div class="header-text visible-xs">
 							...об Испании - стильно!
 							<span>+(34) 672-459-489</span>

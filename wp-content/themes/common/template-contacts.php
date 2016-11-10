@@ -28,15 +28,8 @@ Template Name: Contacts Page
                     <div class="contacts-message">
                         <div class="title">Написать сообщение</div>
                         <div class="contacts-form">
-                            <form>
-                                <input type="text" name="name" placeholder="Ваше имя *" class="required">
-                                <input type="text" name="email" placeholder="E-mail *" class="required">
-                                <input type="text" name="phone" placeholder="Телефон">
-                                <input type="text" name="message" placeholder="Сообщение">
-                            </form>
-                        </div>
-                        <div class="send-button">
-                            <a href="#">Отправить</a>
+                            <?php echo do_shortcode('[contact-form-7 id="268" title="Contact us"]'); ?>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>
