@@ -11,7 +11,7 @@ while ( catalonia_have_posts($wp_query) ) :
                     <div class="blog-title"><?php the_title(); ?></div>
                     <div class="blog-info">
                         <span class="date"><?php echo get_the_date('j F Y'); ?></span>
-                        <span class="comments"> | 4 комментария</span>
+                        <!-- span class="comments"> | 4 комментария</span-->
                     </div>
                     <div class="blog-excerpt"><?php the_excerpt(); ?></div>
                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button">Читать</a>

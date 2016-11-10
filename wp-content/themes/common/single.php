@@ -34,6 +34,10 @@
 					));
 				?>
 				<?php while (catalonia_have_posts($related_query)) : $related_query->the_post(); ?>
+					<?php
+						$type = get_field('select_post_type', get_the_ID());
+						$text = ($type == 'post') ? 'Читать' : 'Смотреть';
+					?>
 					<div class="col-xs-12 col-sm-6">
 						<article>
 							<a class="blog-post-entry" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
@@ -42,15 +46,15 @@
 									<div class="blog-title"><?php the_title(); ?></div>
 									<div class="blog-info">
 										<span class="date"><?php echo get_the_date('j F Y'); ?></span>
-										<span class="comments"> | 4 комментария</span>
+										<!-- span class="comments"> | 4 комментария</span-->
 									</div>
 									<div class="blog-excerpt"><?php the_excerpt(); ?></div>
-									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button">Читать</a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button"><?php echo $text; ?></a>
 								</div>
 							</a>
 						</article>
 					</div>
-				<?php endwhile; ?>
+ 				<?php endwhile; ?>
 			</div>
 		</div>
 	</div>

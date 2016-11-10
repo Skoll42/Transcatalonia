@@ -602,7 +602,8 @@ body {
     .excursion .tab-content .excursion-body .excursion-content .amount {
       font-size: 14px;
       line-height: 14px;
-      opacity: .54; }
+      opacity: .54;
+      margin-bottom: 25px; }
 
 @media (min-width: 768px) {
   .blog .row {
