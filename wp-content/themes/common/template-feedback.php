@@ -30,6 +30,7 @@ Template Name: Feedback Page
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
+                        <?php wp_reset_query($feedback_query); ?>
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#moments-carousel" role="button" data-slide="prev">
