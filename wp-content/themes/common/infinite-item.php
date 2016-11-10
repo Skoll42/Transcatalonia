@@ -2,6 +2,8 @@
 global $wp_query;
 while ( catalonia_have_posts($wp_query) ) :
     $wp_query->the_post();
+    $type = get_field('select_post_type', get_the_ID());
+    $text = ($type == 'post') ? 'Читать' : 'Смотреть';
     ?>
     <div class="column post-infinite-item">
         <article>
@@ -14,7 +16,7 @@ while ( catalonia_have_posts($wp_query) ) :
                         <!-- span class="comments"> | 4 комментария</span-->
                     </div>
                     <div class="blog-excerpt"><?php the_excerpt(); ?></div>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button">Читать</a>
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="read-button"><?php echo $text; ?></a>
                 </div>
             </a>
         </article>
