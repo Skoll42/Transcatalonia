@@ -302,9 +302,11 @@ body {
     color: #fff;
     height: 350px;
     position: relative; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .articles-grid article.main-article {
-        height: auto; } }
+        margin-left: -11px;
+        margin-right: -11px;
+        height: 550px; } }
     .articles-grid article.main-article img {
       min-height: 350px; }
     .articles-grid article.main-article .description {
