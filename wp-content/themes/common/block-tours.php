@@ -30,3 +30,5 @@ $tours_query = new WP_Query($args);
     </li>
 <?php endwhile; ?>
 </ul>
+<?php catalonia_rewind_posts($tours_query); ?>
+<?php wp_reset_postdata(); ?>

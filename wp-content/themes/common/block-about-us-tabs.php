@@ -25,5 +25,6 @@
             </a>
         </li>
     <?php endwhile; ?>
-    <?php wp_reset_query(); ?>
+    <?php catalonia_rewind_posts($guides_query); ?>
+    <?php wp_reset_postdata(); ?>
 </ul>

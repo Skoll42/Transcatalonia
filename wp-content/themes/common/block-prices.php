@@ -7,7 +7,7 @@ if (!empty($prices)) : ?>
             <?php foreach($prices as $price) : ?>
                 <li>
                     <span class="amount"><?php echo $price['number_of_tourists'] . ' человек'?></span>
-                    <span><?php echo $price['price'] . ' $ с человека' ?></span>
+                    <span><?php echo $price['price'] . ' € с человека' ?></span>
                 </li>
             <?php endforeach;?>
         </ul>
