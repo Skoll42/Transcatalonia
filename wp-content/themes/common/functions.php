@@ -292,3 +292,6 @@ function catalonia_rewind_posts($query = null){
     $query->rewind_posts();
 }
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'catalonia-large', 1200, 675, true );
+
