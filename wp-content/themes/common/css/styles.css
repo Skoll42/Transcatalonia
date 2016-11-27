@@ -584,7 +584,8 @@ body {
       margin-right: auto; }
   .excursion .tab-content .excursion-body .main-image img {
     margin: 0;
-    max-height: 500px; }
+    max-height: 500px;
+    width: 100%; }
   .excursion .tab-content .excursion-body .excursion-content {
     padding: 25px; }
     .excursion .tab-content .excursion-body .excursion-content .place {
