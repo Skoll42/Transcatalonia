@@ -37,7 +37,9 @@
 					<div class="col-xs-12">
 						<article class="main-article">
 							<a href="<?php echo $link; ?>" title="<?php echo $title; ?>" class="article-card">
-								<?php if ($thumbnail_url) : echo $thumbnail; endif;?>
+								<div class="bg-image embed-responsive embed-responsive-16by9">
+									<?php if ($thumbnail_url) : echo $thumbnail; endif;?>
+								</div>
 							</a>
 							<div class="description">
 								<div class="place col-xs-6 pull-left">
@@ -71,7 +73,9 @@
 						<article>
 							<div class="article-common">
 								<a href="<?php echo $link; ?>" title="<?php echo $title; ?>" class="article-card">
-									<?php if ($thumbnail_url) : echo $thumbnail; endif;?>
+									<div class="bg-image embed-responsive embed-responsive-16by9">
+										<?php if ($thumbnail_url) : echo $thumbnail; endif;?>
+									</div>
 								</a>
 								<div class="main-description">
 									<div class="place col-xs-6 pull-left">

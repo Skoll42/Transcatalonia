@@ -91,17 +91,14 @@ body {
 				line-height: 24px;
 			}
 		}
-		.article-common {			
-			height: 350px;			
+		.article-common {
 			position: relative;
-			@media (min-width: $screen-sm-min) {
-				height: 300px;
-			}
+			max-height: 350px;
 			img {
-				width: auto;
-				@media (min-width: $screen-md-min) {
-			    	width: 100%;
-			    }
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
 			}			
 			.main-description {
 				background-color: rgba(0, 0, 0, 0.6);
@@ -155,15 +152,16 @@ body {
 			-moz-box-shadow: none;
 			box-shadow: none;			
 			color: #fff;
-			height: 350px;
 			position: relative;
 			@media (min-width: $screen-md-min) {
 		    	margin-left: -11px;
 				margin-right: -11px;
-				height: 550px;
 			}
 			img {
-				min-height: 350px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
 			}
 			.description {
 				background-color: rgba(0, 0, 0, 0.6);
@@ -462,6 +460,9 @@ body {
 	    				}
 		    			.place, .price {
 		    				opacity: .87;
+							@media (min-width: $screen-md-min) {
+								max-width: 160px;
+							}
 		    			}
 		    			.excerpt {
 		    				display: none;
@@ -485,11 +486,6 @@ body {
 		    			}
 		    		}
 		    	}
-		    	&:first-child {
-		    		a {
-		    			border-top-left-radius: 2px;
-		    		}
-		    	}
 		    }
 		}		
 	}
@@ -497,7 +493,12 @@ body {
 		.excursion-body {
 			img {
 				margin: 20px 0;
-				width: 100%;
+				&.alignright { float: right; margin: 0 0 1em 1em; }
+				&.alignleft { float: left; margin: 0 1em 1em 0; }
+				&.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+				&.alignright { float: right; }
+				&.alignleft { float: left; }
+				&.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 			}
 			.main-image {
 				img {
@@ -565,9 +566,10 @@ body {
 							margin-bottom: 15px;
 							opacity: .87;														
 							@media (min-width: $screen-sm-min) {
-								width: 49%;
+								width: 50%;
+								float: left;
 								&:nth-child(2n) {
-									text-align: right;
+									float: right;
 								}
 							}
 							span {
@@ -590,7 +592,6 @@ body {
 					font-size: 14px;
 					line-height: 14px;
 					opacity: .54;
-					margin-bottom: 25px;
 				}
 			}			
 		}
