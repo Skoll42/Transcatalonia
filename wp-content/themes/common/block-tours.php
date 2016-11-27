@@ -4,6 +4,7 @@ $args = [
     'post_type' => 'tours',
     'orderby'   => 'menu_order',
     'order'     => 'ASC',
+    'posts_per_page' => -1,
 ];
 $tours_query = new WP_Query($args);
 ?>
