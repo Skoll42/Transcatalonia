@@ -3,6 +3,7 @@ $prices = get_field('prices');
 if (!empty($prices)) : ?>
     <div class="price-table">
         <div class="header">Стоимость экскурсии</div>
+        <div class="clearfix"></div>
         <ul class="price-list">
             <?php $curr = 0; foreach($prices as $price) : $curr++; ?>
                 <li>
