@@ -510,7 +510,8 @@ body {
     float: left;
     width: 100%; }
     .excursion .tabs-left .nav-tabs li {
-      float: none; }
+      float: none;
+      word-break: break-word; }
       .excursion .tabs-left .nav-tabs li a {
         border: 0;
         border-radius: 0;
