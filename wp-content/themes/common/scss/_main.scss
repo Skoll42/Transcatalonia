@@ -1055,7 +1055,7 @@ body {
 					img {
 						margin: 0 auto;						
 						@media (min-width: $screen-sm-min) {
-							max-width: calc(100% - 345px);
+							max-width: 100%;
 						}
 					}
 				}

@@ -1030,7 +1030,7 @@ body {
           margin: 0 auto; }
           @media (min-width: 768px) {
             .feedback .moments-slider .carousel .carousel-inner .item img {
-              max-width: calc(100% - 345px); } }
+              max-width: 100%; } }
       .feedback .moments-slider .carousel .carousel-control {
         background-image: none; }
         .feedback .moments-slider .carousel .carousel-control span {
