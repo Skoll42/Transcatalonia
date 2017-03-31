@@ -1008,19 +1008,24 @@ body {
 						margin-top: 20px;
 						padding: 0;
 						li {
-							margin-bottom: 25px;
+							margin-bottom: 15px;
+							@media (min-width: $screen-sm-min) {
+								margin-bottom: 25px;
+							}
 							.icon {																
 								display: inline-block;
 								vertical-align: middle;
-								width: 34px;
-								height: 34px;
+								height: 43px;
+								width: 45px;
 							}
 							span:not(.icon) {
 								display: inline-block;
-								margin-left: 5px;								
+								margin-left: 5px;
+								margin-top: 5px;
 								vertical-align: middle;
-								width: calc(100% - 60px);
+								width: calc(100% - 70px);
 								@media (min-width: $screen-sm-min) {
+									margin-top: -28px;
 									margin-left: 20px;
 								}
 							}

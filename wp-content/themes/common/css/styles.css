@@ -992,19 +992,24 @@ body {
     margin-top: 20px;
     padding: 0; }
     .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li {
-      margin-bottom: 25px; }
+      margin-bottom: 15px; }
+      @media (min-width: 768px) {
+        .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li {
+          margin-bottom: 25px; } }
       .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li .icon {
         display: inline-block;
         vertical-align: middle;
-        width: 34px;
-        height: 34px; }
+        height: 43px;
+        width: 45px; }
       .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li span:not(.icon) {
         display: inline-block;
         margin-left: 5px;
+        margin-top: 5px;
         vertical-align: middle;
-        width: calc(100% - 60px); }
+        width: calc(100% - 70px); }
         @media (min-width: 768px) {
           .about .tab-content .tab-pane .excursion-body .excursion-content .list-services li span:not(.icon) {
+            margin-top: -28px;
             margin-left: 20px; } }
 
 .feedback {
