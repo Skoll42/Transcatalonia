@@ -35,13 +35,13 @@ defined('WP_CONTENT_URL') or define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'transcatalonia');
+define('DB_NAME', 'transcatalonia_tours_new');
 
 /** MySQL database username */
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'mazafaka');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
