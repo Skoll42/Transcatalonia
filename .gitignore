@@ -1,3 +1,4 @@
 # Uploads
 /wp-content/uploads/*
 !/wp-content/uploads/.gitkeep
+/.idea
