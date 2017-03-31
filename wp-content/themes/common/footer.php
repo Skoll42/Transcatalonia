@@ -10,8 +10,8 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/search-trigger.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/modal-head-content.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.dotdotdot.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/truncate-content.js"></script>
+<!--<script src="<?php /*echo get_stylesheet_directory_uri(); */?>/js/jquery.dotdotdot.min.js"></script>
+<script src="<?php /*echo get_stylesheet_directory_uri(); */?>/js/truncate-content.js"></script>-->
 <?php wp_footer(); ?>
 
 </body>
