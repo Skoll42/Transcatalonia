@@ -30,8 +30,8 @@
 					$link = get_the_permalink();
 					$title = get_the_title();
 					$excerpt = get_the_excerpt();
-					$thumbnail = get_the_post_thumbnail();
-					$thumbnail_url = get_the_post_thumbnail_url();
+					$thumbnail = get_the_post_thumbnail(null, 'catalonia-large');
+					$thumbnail_url = get_the_post_thumbnail_url(null, 'catalonia-large');
 					$duration = get_field('duration');
 				?>
 				<?php if($curPostNum == 0) : ?>
