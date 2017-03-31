@@ -49,7 +49,7 @@
                                    data-title="<?php echo $title; ?>">Заказать тур</a>
                                 <?php get_template_part('block', 'prices'); ?>
                                 <div class="duration">Продолжительность: <?php echo $duration; ?></div>
-                                <div class="amount"><?php echo 'Группа: ' . get_group_range(get_the_ID()) . ' человек'; ?></div>
+                                <div class="tourists-amount"><?php echo 'Группа: ' . get_group_range(get_the_ID()) . ' человек'; ?></div>
                                 <?php the_content(); ?>
                                 <a class="order-button" href="#"
                                    data-toggle="modal"
