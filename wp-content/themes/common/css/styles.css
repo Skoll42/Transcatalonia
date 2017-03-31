@@ -620,6 +620,8 @@ body {
           margin-bottom: 0; } }
       .excursion .tab-content .excursion-body .excursion-content .order-button:hover {
         text-underline: none; }
+      .excursion .tab-content .excursion-body .excursion-content .order-button.order-button-bottom {
+        margin-top: 15px; }
     .excursion .tab-content .excursion-body .excursion-content .price-table .header {
       font-size: 18px;
       line-height: 18px;

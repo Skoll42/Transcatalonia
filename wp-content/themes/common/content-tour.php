@@ -51,7 +51,7 @@
                                 <div class="duration">Продолжительность: <?php echo $duration; ?></div>
                                 <div class="tourists-amount"><?php echo 'Группа: ' . get_group_range(get_the_ID()) . ' человек'; ?></div>
                                 <?php the_content(); ?>
-                                <a class="order-button" href="#"
+                                <a class="order-button order-button-bottom" href="#"
                                    data-toggle="modal"
                                    data-target="#order-popup"
                                    data-link="<?php echo $link; ?>"
