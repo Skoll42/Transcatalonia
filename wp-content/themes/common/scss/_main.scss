@@ -452,6 +452,13 @@ body {
 								max-width: 160px;
 							}
 		    			}
+
+						.place, .excerpt {
+							height: 100%;
+							max-height: 40px;
+							overflow: visible;
+						}
+
 		    			.excerpt {
 		    				display: none;
 		    				margin: 3px 0;

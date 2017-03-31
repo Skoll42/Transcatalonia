@@ -544,6 +544,10 @@ body {
             @media (min-width: 992px) {
               .excursion .tabs-left .nav-tabs li a .place-info .place, .excursion .tabs-left .nav-tabs li a .place-info .price {
                 max-width: 160px; } }
+          .excursion .tabs-left .nav-tabs li a .place-info .place, .excursion .tabs-left .nav-tabs li a .place-info .excerpt {
+            height: 100%;
+            max-height: 40px;
+            overflow: visible; }
           .excursion .tabs-left .nav-tabs li a .place-info .excerpt {
             display: none;
             margin: 3px 0;

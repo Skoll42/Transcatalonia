@@ -7,7 +7,7 @@
     $duration = get_field('duration');
 ?>
 
-<div class="excursion">
+<div class="excursion excursion-main">
     <div class="container">
         <div class="row">
             <div class="modal fade" id="order-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
