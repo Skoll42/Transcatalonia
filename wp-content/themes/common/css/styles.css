@@ -758,10 +758,24 @@ body {
       @media (min-width: 480px) {
         .blog-entry .entry-body .entry-content {
           padding: 30px; } }
-      .blog-entry .entry-body .entry-content img {
+      .blog-entry .entry-body .entry-content img.alignright {
+        float: right;
+        margin: 0 0 1em 1em; }
+      .blog-entry .entry-body .entry-content img.alignleft {
+        float: left;
+        margin: 0 1em 1em 0; }
+      .blog-entry .entry-body .entry-content img.aligncenter {
         display: block;
-        margin: 0 auto 20px;
-        max-width: 100%; }
+        margin-left: auto;
+        margin-right: auto; }
+      .blog-entry .entry-body .entry-content img.alignright {
+        float: right; }
+      .blog-entry .entry-body .entry-content img.alignleft {
+        float: left; }
+      .blog-entry .entry-body .entry-content img.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
       .blog-entry .entry-body .entry-content p {
         margin-bottom: 20px; }
     .blog-entry .entry-body .entry-comments {
