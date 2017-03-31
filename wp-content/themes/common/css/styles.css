@@ -210,12 +210,13 @@ body {
     display: inline-block;
     padding: 0; }
     .articles-grid article .place .city {
-      font-size: 24px;
-      line-height: 24px;
-      max-width: 70%; }
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 100%; }
       @media (min-width: 768px) {
         .articles-grid article .place .city {
-          max-width: none; } }
+          font-size: 24px;
+          line-height: 24px; } }
     .articles-grid article .place .details {
       font-size: 14px;
       line-height: 24px; }
@@ -228,7 +229,6 @@ body {
       .articles-grid article .place .details span {
         display: block; }
   .articles-grid article .price {
-    margin-top: 20px;
     padding: 0; }
     @media (min-width: 480px) {
       .articles-grid article .price {
@@ -306,19 +306,19 @@ body {
       .articles-grid article.main-article .description .place {
         padding: 0; }
         .articles-grid article.main-article .description .place .city {
-          font-size: 36px;
-          line-height: 36px;
-          margin-bottom: 15px;
-          max-width: 70%; }
+          font-size: 16px;
+          line-height: 18px;
+          max-width: 100%; }
           @media (min-width: 992px) {
             .articles-grid article.main-article .description .place .city {
-              max-width: none; } }
+              font-size: 36px;
+              line-height: 36px;
+              margin-bottom: 15px; } }
         .articles-grid article.main-article .description .place .details {
           font-size: 14px;
           line-height: 24px;
           opacity: .87; }
       .articles-grid article.main-article .description .price {
-        margin-top: 20px;
         padding: 0; }
         @media (min-width: 480px) {
           .articles-grid article.main-article .description .price {

@@ -48,11 +48,12 @@ body {
 			display: inline-block;
 			padding: 0;
 			.city {
-				font-size: 24px;
-				line-height: 24px;
-				max-width: 70%;
+				font-size: 14px;
+				line-height: 16px;
+				max-width: 100%;
 				@media (min-width: $screen-sm-min) {
-					max-width: none;
+					font-size: 24px;
+					line-height: 24px;
 				}
 			}
 			.details {
@@ -70,7 +71,6 @@ body {
 			}
 		}
 		.price {
-			margin-top: 20px;
 			padding: 0;
 			@media (min-width: $screen-xs-min) {
 				float: right;
@@ -162,12 +162,13 @@ body {
 				.place {
 					padding: 0;
 					.city {
-						font-size: 36px;
-						line-height: 36px;
-						margin-bottom: 15px;
-						max-width: 70%;
+						font-size: 16px;
+						line-height: 18px;
+						max-width: 100%;
 						@media (min-width: $screen-md-min) {
-							max-width: none;
+							font-size: 36px;
+							line-height: 36px;
+							margin-bottom: 15px;
 						}
 					}
 					.details {
@@ -177,7 +178,6 @@ body {
 					}
 				}				
 				.price {
-					margin-top: 20px;
 					padding: 0;
 					@media (min-width: $screen-xs-min) {
 						float: right;
