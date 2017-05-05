@@ -292,6 +292,16 @@ function catalonia_rewind_posts($query = null){
     $query->rewind_posts();
 }
 
+function be_menu_item_classes( $classes, $item) {
+    if(is_category('blog') && 'Блог' == $item->title) {
+        $classes[] = 'current_page_item';
+    }
+
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'be_menu_item_classes', 10, 2 );
+
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'catalonia-large', 1200, 675, true );
-
+add_image_size( 'catalonia-icon', 400, 400, true );
+add_image_size( 'catalonia-avatar', 100, 100, true );

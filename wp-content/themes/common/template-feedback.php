@@ -10,15 +10,20 @@ Template Name: Feedback Page
         <div class="row">
             <div class="col-xs-12">
                 <div class="moments-slider">
+                    <div class="reviews">Отзывы</div>
+                    <div class="reviews-list">
+                        <?php comments_template( '', true ); ?>
+                    </div>
+                    <div class="line-divider"></div>
                     <div class="slider-title">Фрагменты с разных сайтов и соцсетей</div>
                     <div id="moments-carousel" class="carousel slide" data-ride="carousel">
                         <?php
-                            $args = [
-                                'post_type' => 'feedback',
-                                'posts_per_page' => -1
-                            ];
-                            $feedback_query = new WP_Query($args);
-                            $curPostNum = 0;
+                        $args = [
+                            'post_type' => 'feedback',
+                            'posts_per_page' => -1
+                        ];
+                        $feedback_query = new WP_Query($args);
+                        $curPostNum = 0;
                         ?>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
@@ -39,11 +44,6 @@ Template Name: Feedback Page
                         <a class="right carousel-control" href="#moments-carousel" role="button" data-slide="next">
                             <span class="right-arrow"></span>
                         </a>
-                    </div>
-                    <div class="line-divider"></div>
-                    <div class="reviews">Отзывы</div>
-                    <div class="reviews-list">
-                        <?php comments_template( '', true ); ?>
                     </div>
                 </div>
             </div>

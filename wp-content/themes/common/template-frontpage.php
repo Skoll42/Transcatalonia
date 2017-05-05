@@ -87,7 +87,7 @@
 										</div>
 									</div>
 									<div class="price col-xs-6">
-										<span class="pull-right"><?php echo 'от ' . get_lowest_tour_price(get_the_ID()) . ' $'; ?></span>
+										<span class="pull-right"><?php echo 'от ' . get_lowest_tour_price(get_the_ID()) . ' €'; ?></span>
 									</div>
 								</div>
 							</div>

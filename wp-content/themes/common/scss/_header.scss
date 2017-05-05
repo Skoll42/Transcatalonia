@@ -141,11 +141,12 @@
 					font-size: 14px;
 					opacity: .87;
 					outline: 0;
+					width: 150px;
 					@media (min-width: $screen-sm-min) {
 						width: 80px;
 					}
 					@media (min-width: $screen-md-min) {
-						width: auto;
+						width: 150px;
 					}
 				}
 			}

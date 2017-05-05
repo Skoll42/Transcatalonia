@@ -29,8 +29,9 @@ body {
 		-webkit-box-shadow: 0px 2px 6px 2px rgba(128,128,128,1);
 		-moz-box-shadow: 0px 2px 6px 2px rgba(128,128,128,1);
 		box-shadow: 0px 2px 6px 2px rgba(128,128,128,1);
-		margin-bottom: 8px;
+		margin-bottom: 30px;
 		overflow: hidden;
+
 		img {
 			border-radius: 2px;
 			height: 100%;
@@ -630,6 +631,9 @@ body {
 .blog, .related-entries {	
 	article {
 		margin-bottom: 15px;
+		-webkit-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
+		-moz-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
+		box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
 
 		a.blog-post-entry {
 			text-decoration: none !important;
@@ -639,11 +643,11 @@ body {
 		}
 		img {
 			width: 100%;
+			-webkit-box-shadow: 0px -1px 6px 0px rgba(128,128,128,1);
+			-moz-box-shadow: 0px -1px 6px 0px rgba(128,128,128,1);
+			box-shadow: 0px -1px 6px 0px rgba(128,128,128,1);
 		}
 		.info-block {
-			-webkit-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
-			-moz-box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
-			box-shadow: 0px 2px 6px 0px rgba(128,128,128,1);
 			color: #000;
 			padding: 20px;
 			.blog-title {				
@@ -1035,7 +1039,6 @@ body {
 							}
 							.icon {																
 								display: inline-block;
-								vertical-align: middle;
 								height: 43px;
 								width: 45px;
 							}

@@ -14,10 +14,14 @@
         ];
         $guides_query = new WP_Query($args);
     ?>
-    <?php while ($guides_query->have_posts()) : $guides_query->the_post(); ?>
+    <?php while ($guides_query->have_posts()) : $guides_query->the_post();
+        $avatar = wp_get_attachment_image_src(get_field('avatar'), 'catalonia-avatar');
+    ?>
         <li>
             <a href="#<?php the_ID(); ?>" data-toggle="tab" aria-expanded="true">
-                <img src="<?php the_field('avatar'); ?>">
+                <?php if(is_array($avatar) && !empty($avatar)) : ?>
+                    <img src="<?php echo $avatar[0]; ?>">
+                <?php endif; ?>
                 <div class="place-info">
                     <div class="place"><?php the_title(); ?></div>
                     <div class="excerpt"><?php the_field('position'); ?></div>
