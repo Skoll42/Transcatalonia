@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Feedback Page
+Template Name: Feed
 */
 ?>
 
